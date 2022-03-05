@@ -4,12 +4,12 @@ import { AppProps } from "next/app";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <>
+    <div className="bg-gray-400 min-h-screen">
       <Header />
-      <main className="container mx-auto">
-        <Component {...pageProps} />
+      <main className="">
+        <Component {...pageProps} cla/>
       </main>
-    </>
+    </div>
   );
 }
 

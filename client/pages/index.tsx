@@ -9,13 +9,16 @@ import { GetStaticProps } from "next";
 
 export default function Home({ posts }) {
   return (
-    <div className="w-full">
+    <div className="flex flex-col justify-center items-center my-2 bg-gray-400">
       <Head>
         <title>Dev Blog</title>
       </Head>
-      {posts.map((post, index) => (
-        <Post slug={post.slug} frontmatter={post.frontmatter} key={index} />
-      ))}
+      <h1 className="text-8xl">A blog a day keeps the...</h1>
+      <div className="flex flex-row justify-center  flex-wrap mt-8">
+        {posts.map((post, index) => (
+          <Post slug={post.slug} frontmatter={post.frontmatter} key={index} />
+        ))}
+      </div>
     </div>
   );
 }
